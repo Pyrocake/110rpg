@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #292e38;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    /* width and height are placeholder */
+    width: 960px;
+    height: 540px;
+    margin: 0 auto;
+    margin-top: 20px;
+    outline: 1px solid white;
+}
