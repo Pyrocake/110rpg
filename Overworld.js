@@ -6,7 +6,7 @@ class Overworld {
     }
 
     init() {
-        console.log("Map initialization started.", this);
+        console.log("Overworld initialization started.", this);
 
         const map = new Image();
         map.onload = () => {
@@ -14,24 +14,23 @@ class Overworld {
         };
         map.src = "/images/map_placeholder.png";
 
-        
+        // Place Game Objects
+        const hero = new GameObject({
+            x: 1,
+            y: 4,
+            src: "/images/hero_placeholder.png"
+        })
 
-        //offset for feet positioning
-        const offsetX = 9;
-        const offsetY = 5;
-        //allows coordinate based positioning
-        const gridSize = 16;
+        const hero2 = new GameObject({
+            x: 5,
+            y: 9,
+            src: "/images/hero2.png"
+        })
 
-        const shadow = new Image();
-        shadow.onload = () => {
-            this.ctx.drawImage(shadow, (1 * gridSize) - offsetX, (4 * gridSize) - offsetY)
-        };
-        shadow.src = "/images/shadow_placeholder.png";
-
-        const hero = new Image();
-        hero.onload = () => {
-            this.ctx.drawImage(hero, (1 * gridSize) - offsetX, (4 * gridSize) - offsetY)
-        };
-        hero.src = "/images/hero_placeholder.png";
+        //TODO Remove on creation of game loop
+        setTimeout(() => {
+            hero.sprite.draw(this.ctx);
+            hero2.sprite.draw(this.ctx);
+        }, 200)
     }
 }
