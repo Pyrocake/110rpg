@@ -33,8 +33,8 @@ class Sprite {
     }
 
     draw(ctx) {
-        const x = this.gameObject.x * 16 - 9 //9 is offset for feet
-        const y = this.gameObject.y * 16 - 5 //5 is offset
+        const x = this.gameObject.x - 9 //9 is offset for feet
+        const y = this.gameObject.y - 5 //5 is offset
 
         this.isShadowLoaded && ctx.drawImage(this.shadow, x, y)
         this.isLoaded && ctx.drawImage(this.image,

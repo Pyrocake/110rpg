@@ -5,7 +5,7 @@ class GameObject {
 
         this.sprite = new Sprite({
             gameObject: this,
-            src: config.src || "/images/hero_plaeholder.png",
+            src: config.src || "/images/hero_placeholder.png",
         });
     }
 }
