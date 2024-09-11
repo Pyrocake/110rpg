@@ -22,12 +22,13 @@ window.OverworldMaps = {
         drawnBelowSrc: "/images/map_placeholder.png",
         drawnAboveSrc: "/images/map_placeholder_above.png",
         gameObjects: {
-            hero: new GameObject({
+            hero: new Person({
+                isPlayer: true,
                 x: utils.withGrid(1),
                 y: utils.withGrid(4),
                 src: "/images/hero_placeholder.png"
             }),
-            hero2: new GameObject({
+            hero2: new Person({
                 x: utils.withGrid(5),
                 y: utils.withGrid(9),
                 src: "/images/hero2.png"
@@ -38,12 +39,12 @@ window.OverworldMaps = {
         drawnBelowSrc: "/images/map_placeholder2.png",
         drawnAboveSrc: "/images/map_placeholder_above.png",
         gameObjects: {
-            hero: new GameObject({
+            hero: new Person({
                 x: utils.withGrid(4),
                 y: utils.withGrid(6),
                 src: "/images/hero_placeholder.png"
             }),
-            hero2: new GameObject({
+            hero2: new Person({
                 x: utils.withGrid(8),
                 y: utils.withGrid(8),
                 src: "/images/hero2.png"
